@@ -18,7 +18,6 @@ set :puma_error_log,  "#{release_path}/log/puma.access.log"
 # set :ssh_options,     { forward_agent: true, port: 2222,  user: 'deploy', password: 'deploy_password' }
 set :ssh_options,     { forward_agent: true, port: 2222,  user: 'deploy', keys: %w(../deploy_ssh/id_rsa) }
 set :puma_preload_app, true
-set :puma_worker_timeout, nil 
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 ## Defaults:
 set :scm,           :git
